@@ -31,7 +31,8 @@ https://www.youtube.com/watch?v=2e29I3dA8o4&ab_channel=AmazonWebServices
 |-------------------|--------------------|-------------------|
 | Backup & restore  | hours              | hours             |
 | Pilot light       | minutes            | minutes           |
-| Warn standby      | subseconds         | subseconds        |
+| Warn standby      | seconds            | seconds           |
+| Active-active     | 0                  | 0                 |
 
 #### Backup & Restore
 Data loss ~ a day
@@ -50,6 +51,22 @@ Recovery time ~ subseconds
 ![image](https://user-images.githubusercontent.com/11683340/179390257-aedff5c5-53ce-417e-bf88-08d7c707ff18.png)
 
 
-#### Active-Active
+### Active-Active Design Patters
+#### Read local, write global
+![image](https://user-images.githubusercontent.com/11683340/179390986-dcd7989d-a8a5-4d53-9115-129502cce05e.png)
+Use when read-write ratio is 99%, e.g. registration, authorization systems.
+Do that if you can.
+
+#### Read local, write partitioned
+![image](https://user-images.githubusercontent.com/11683340/179391085-dc2d32a3-70dc-41f7-a518-4edde09b5631.png)
+Use when read-write ratio is 50%.
+Do that if you have to.
+
+#### Read load, write local (! anti-pattern)
+![image](https://user-images.githubusercontent.com/11683340/179391209-608bfa06-bba1-4e0e-af9f-e88dc8a8c240.png)
+Do that if you dont have any other choices. 
+
+
+
 
 ### How do I re-design
