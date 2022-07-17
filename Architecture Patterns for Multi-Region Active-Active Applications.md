@@ -38,38 +38,43 @@
 | Active-active     | 0                  | 0                 |
 
 #### Backup & Restore
-Data loss ~ a day
-Recovering time ~ hours
-
 ![image](https://user-images.githubusercontent.com/11683340/179390188-7ab8c116-852e-4b99-a0ec-6a5354daa8a7.png)
 
 #### Pilot Light
-Data loss ~ minutes
-Recovering time ~ an hour
 ![image](https://user-images.githubusercontent.com/11683340/179390209-552dd12a-a31a-48c8-8c81-c447ecb0f4e2.png)
 
 #### Warm Standby
-Data loass ~ subseconds
-Recovery time ~ subseconds
 ![image](https://user-images.githubusercontent.com/11683340/179390257-aedff5c5-53ce-417e-bf88-08d7c707ff18.png)
 
 
 ### Active-Active Design Patters
 #### Read local, write global
 ![image](https://user-images.githubusercontent.com/11683340/179390986-dcd7989d-a8a5-4d53-9115-129502cce05e.png)
+
 Use when read-write ratio is 99%, e.g. registration, authorization systems.
 Do that if you can.
 
 #### Read local, write partitioned
 ![image](https://user-images.githubusercontent.com/11683340/179391085-dc2d32a3-70dc-41f7-a518-4edde09b5631.png)
+
 Use when read-write ratio is 50%.
 Do that if you have to.
 
 #### Read load, write local (! anti-pattern)
-![image](https://user-images.githubusercontent.com/11683340/179391209-608bfa06-bba1-4e0e-af9f-e88dc8a8c240.png)
+![image](https://user-images.githubusercontent.com/11683340/179391418-352e001a-fbf5-4a82-8342-f4e9076c2c5c.png)
+
 Do that if you dont have any other choices. 
 
 
+### Multi-region Tools
+#### S3
+* Availability Zones
+* S3 cross-region replication
 
+#### EBS
+* Snapshots saved cross region
 
-### How do I re-design
+#### DynamoDB Global Tables
+* Fully managed, multi-master, multi-region database
+
+### RDS and Aurora
