@@ -28,7 +28,7 @@
 ## Business continuity 
 ![image](https://user-images.githubusercontent.com/11683340/179390082-0c65c55d-ee97-4ced-8db8-1e08e78d1fdd.png)
 
-### Strategies
+## Multi-region Strategies
 
 | Strategy          | Data loss time     | Recovery time     |
 |-------------------|--------------------|-------------------|
@@ -37,13 +37,13 @@
 | Warn standby      | seconds            | seconds           |
 | Active-active     | 0                  | 0                 |
 
-#### Backup & Restore
+### Backup & Restore
 ![image](https://user-images.githubusercontent.com/11683340/179390188-7ab8c116-852e-4b99-a0ec-6a5354daa8a7.png)
 
-#### Pilot Light
+### Pilot Light
 ![image](https://user-images.githubusercontent.com/11683340/179390209-552dd12a-a31a-48c8-8c81-c447ecb0f4e2.png)
 
-#### Warm Standby
+### Warm Standby
 ![image](https://user-images.githubusercontent.com/11683340/179390257-aedff5c5-53ce-417e-bf88-08d7c707ff18.png)
 
 
