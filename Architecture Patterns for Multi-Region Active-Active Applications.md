@@ -47,34 +47,33 @@
 ![image](https://user-images.githubusercontent.com/11683340/179390257-aedff5c5-53ce-417e-bf88-08d7c707ff18.png)
 
 
-### Active-Active Design Patters
-#### Read local, write global
+## Active-Active Design Patterns
+### Read local, write global
 ![image](https://user-images.githubusercontent.com/11683340/179390986-dcd7989d-a8a5-4d53-9115-129502cce05e.png)
 
 Use when read-write ratio is 99%, e.g. registration, authorization systems.
 Do that if you can.
 
-#### Read local, write partitioned
+### Read local, write partitioned
 ![image](https://user-images.githubusercontent.com/11683340/179391085-dc2d32a3-70dc-41f7-a518-4edde09b5631.png)
 
 Use when read-write ratio is 50%.
 Do that if you have to.
 
-#### Read load, write local (! anti-pattern)
+### Read load, write local (! anti-pattern)
 ![image](https://user-images.githubusercontent.com/11683340/179391418-352e001a-fbf5-4a82-8342-f4e9076c2c5c.png)
 
 Do that if you dont have any other choices. 
 
-
-### Multi-region Tools
-#### S3
+## Multi-region Implementation Tools
+### S3
 * Availability Zones
 * S3 cross-region replication
 
-#### EBS
+### EBS
 * Snapshots saved cross region
 
-#### DynamoDB Global Tables
+### DynamoDB Global Tables
 * Fully managed, multi-master, multi-region database
 
 ### RDS and Aurora
