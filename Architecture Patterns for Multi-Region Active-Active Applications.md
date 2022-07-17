@@ -1,5 +1,8 @@
 # AWS re:Invent 2018: Architecture Patterns for Multi-Region Active-Active Applications (ARC209-R2)
-https://www.youtube.com/watch?v=2e29I3dA8o4&ab_channel=AmazonWebServices
+
+* [Original video](https://www.youtube.com/watch?v=2e29I3dA8o4&ab_channel=AmazonWebServices)
+* [Blog post](https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-iv-multi-site-active-active/)
+
 
 ## Definitions
 1. Failover - a procedure by which a system automatically transfers control to a duplicate system when it detects a fault or failure.
