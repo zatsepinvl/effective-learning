@@ -77,3 +77,11 @@ Do that if you dont have any other choices.
 * Fully managed, multi-master, multi-region database
 
 ### RDS and Aurora
+
+## Multi-region Operatinos (Networking, Security)
+
+### VPC
+1. Inter-Region VPC Peering
+2. Multi-VPC connectivity
+3.  
+
