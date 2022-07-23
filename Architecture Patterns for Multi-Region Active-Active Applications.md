@@ -81,7 +81,24 @@ Do that if you dont have any other choices.
 ## Multi-region Operatinos (Networking, Security)
 
 ### VPC
-1. Inter-Region VPC Peering
-2. Multi-VPC connectivity
-3.  
+1. Inter-Region VPC Peering (single VCP across multiple regions) via AWS backbone
+2. Multi-VPC connectivity (multiple VCPs across multiple regions)
 
+### Route 53
+1. Latency-based routing
+2. Geolocation routing
+3. DNS failover
+
+### Network Load Balancer (NLB)
+1. NLB + Inter-Region VPC Peering
+
+### Global Accelerator
+1. Single global (anycast) IP
+
+## Managing Multi-region Active-active Environemnt
+### CloudFormation StackSets
+### Aws Config rules
+![image](https://user-images.githubusercontent.com/11683340/180622926-b36589ed-2f3e-4728-8bcb-c5d376baf38f.png)
+
+
+## Test Failure Modes
