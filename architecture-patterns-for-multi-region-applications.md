@@ -10,7 +10,7 @@
 
 ## Why NOT multi-region?
 1. Data replication lag.
-2. Testing complexity (dedicted teaming working fulltime).
+2. Testing complexity (dedicated teaming working fulltime).
 3. Overall complexity and cost.
 
 ## Why multi-region?
@@ -78,7 +78,7 @@ Do that if you dont have any other choices.
 
 ### RDS and Aurora
 
-## Multi-region Operatinos (Networking, Security)
+## Multi-region Operations (Networking, Security)
 
 ### VPC
 1. Inter-Region VPC Peering (single VCP across multiple regions) via AWS backbone
@@ -95,7 +95,7 @@ Do that if you dont have any other choices.
 ### Global Accelerator
 1. Single global (anycast) IP
 
-## Managing Multi-region Active-active Environemnt
+## Managing Multi-region Active-active Environment
 ### CloudFormation StackSets
 ### Aws Config rules
 ![image](https://user-images.githubusercontent.com/11683340/180622926-b36589ed-2f3e-4728-8bcb-c5d376baf38f.png)
