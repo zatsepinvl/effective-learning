@@ -238,4 +238,65 @@ falure:
 * **Don't blame**, don't create culture of fear. **Learn** from mistakes, create a learning culture.
 * Often the best learning can come in the wake of an incident.
 
+## 13. Scaling
+
+Reasons:
+
+1. Improve latency or handle more load
+2. Improve robustness
+
+### Four axes of scaling
+
+1. **Vertical**  (scale up/down) - getting a bigger machine. On virtualized infrastructure (public cloud), it will be
+   fast. My be limited by software not using all the CPU cores. No improvement in robustness. Having larger number of
+   small machines might be more cost-effective than to have a small number of large machines.
+2. **Horizontal duplication** (scale in/out) - more instances. Implemented by using load balancer or **competing
+   consumer pattern**. Relatively straightforward, but requires more infrastructure.
+3. **Data partitioning** - dividing work based on partition strategy. Database partition makes sense if it is supported
+   natively. Scales nicely for transactional workloads. Requires throughout choice of partition key. Might hit an issue
+   with queries that span the data in multiple nodes (e.g. MongoDB uses map-reduce to perform such queries). Tricky
+   scaling for writes.Requires more work than vertical/horizontal scaling.
+4. **Functional decomposition** - separation of work into different microservices and scaling them separately. See
+   microservice functional decomposition for implementation details. Enables balancing of infrastructure costs, thereby
+   helping to drive profitability. Also helps to scale an organization. Increases overall complexity of the system. Try
+   to exhaust the other options before considering this one.
+
+### Combining Models
+
+Scale along multiple axes.
+
+### Start Small
+
+We tend to worry too much about efficiency in the wrong places and at the wrong times.
+Ensure that we have a system that is needlessly more complex. Use incremental process of experimentation. See
+Sustainable Adaptability in Resilience.
+
+### Caching
+
+:exclamation: **Treat caching as optimization. The best caching is zero caching.**
+
+Use cache for:
+
+1. Performance - decrease latency
+2. Scale, e.g. database read replicas as cache mechanism.
+3. Robustness - data in local cache enables you to operate in case of origin outage (be careful with the level of stale
+   cache tolerance)
+
+Places to cache:
+
+1. **Client side** - reduced number of request hops.
+2. **Server side** - reduced latency.
+
+Invalidation mechanisms:
+
+1. **Time to live** - entry level timestamp or HTTP headers (Cache-Control, Expires). Simplicity of implementation needs
+   to
+   be balanced against how much tolerance you have around operating on out-of-date data.
+2. **Conditional GETs** -
+3. **Notification base** - client-side cache with update-cache events from data source. Elegant, but requires additional
+   middleware as message broker to implement. Use heartbeat mechanism as fall-back for invalidation in case of broken
+   message delivery or source outage.
+   tbd
+
+
 
