@@ -292,7 +292,7 @@ Invalidation mechanisms:
 1. **Time to live** - entry level timestamp or HTTP headers (Cache-Control, Expires). Simplicity of implementation needs
    to
    be balanced against how much tolerance you have around operating on out-of-date data.
-2. **Conditional GETs** -
+2. **Conditional GETs** - use ETag HTTP header to conditionally make query to data source.
 3. **Notification base** - client-side cache with update-cache events from data source. Elegant, but requires additional
    middleware as message broker to implement. Use heartbeat mechanism as fall-back for invalidation in case of broken
    message delivery or source outage.
