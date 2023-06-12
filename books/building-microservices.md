@@ -296,7 +296,42 @@ Invalidation mechanisms:
 3. **Notification base** - client-side cache with update-cache events from data source. Elegant, but requires additional
    middleware as message broker to implement. Use heartbeat mechanism as fall-back for invalidation in case of broken
    message delivery or source outage.
-   tbd
+4. **Write-through** - the cache is updated at the same time as the state in the origin. Complex, thus used on
+   server-side.
+5. **Write-behind** - the cache itself is updated first, and then the origin is. Cache works like a buffer. Potential
+   data
+   loss is a big concern. Not clear what the origin and source of truth are. Often used for in-process optimizations,
+   but more rarely in microservices.
 
+**The golden rule of caching**:
 
+1. The more caches between you and the source of fresh data, the more stale the data can be.
+2. Do not cache on client and server sides in the same time. Be aware of **cache poisoning**.
+3. Caching right is complex. The ideal number of places to cache is zero.
+
+Freshness vs optimization: understand the requirements of the end user and of the wider system to balance between data
+freshness and latency/performance.
+
+### Autoscaling
+
+Two types:
+
+1. **Predictive** - scale by well-known load trends (e.g. peak load times in the morning for a news website).
+2. **Reactive** - bring up additional instances when see:
+    1. an increase in load
+    2. an instance failure
+
+Have a good suite of **load tests** to reproduce different loads for reactive autoscaling.
+**Use autoscaling for failure conditions first** while you collect the data to implement scaling for load right.
+Make sure that you very cautious about **scaling down too quickly**. In most situations, having more computing power at
+hand than you need is much better than not having enough.
+
+### Start Again
+
+Avoid **starting from scratch** idea. That is a danger that people will see the need to rearchitect when certain scaling
+thresholds are reached as a reason to build for massive scale from the beginning.
+
+As always, start with simple, rapidly experiment and understand required capabilities.
+
+The need to change our systems to deal with scale isn't a sign of failure. It is a sign of success.
 
