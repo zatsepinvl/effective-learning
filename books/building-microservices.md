@@ -335,3 +335,60 @@ As always, start with simple, rapidly experiment and understand required capabil
 
 The need to change our systems to deal with scale isn't a sign of failure. It is a sign of success.
 
+## 14. User Interfaces
+
+Think of user interfaces as the places where we weave together the various strands of the capabilities we want to offer
+our users.
+
+### Ownership Models
+
+**Dedicated frontend team**. Drivers: scarcity of specialists, a drive for consistency, technical challenges. Drawback:
+any UI change requires a constant coordination and handing off work between teams (frontend, backend).
+
+**Stream-aligned teams** or _full-stack team_. UI broken apart and managed by a stream-aligned team including
+server-side components. Teams have direct, component-facing responsibilities in terms of the software they deliver.
+Ensure UI/UX consistency across feature teams _enabling teams_ to share specialist and expertise (feature-agnostic, e.g.
+platform or UX designers team). Don't be afraid of work overlapping or duplication sometimes between product teams, we
+pay a fair price for the increased autonomy and the spead of delivery will pay it off.
+(:exclamation) When you are more removed from the end user, it becomes harder to understand whether your contributions
+are successful, and you can end up focusing on goals that are a long way removed from things the people using your
+software care about.
+
+### Pattern: Monolithic Frontend
+
+UI is a solid deployable unit in which all the UI state and behaviour is defined in the UI itself.
+Use it when already have a dedicated frontend team.
+
+### Pattern: Micro Frontends
+
+An architectural style where independently deliverable frontend applications are composed into a greater whole.
+
+Use when want to adopt end-to-end, steam-aligned teams to benefit the most from the microservice architecture.
+
+**Page-based decomposition**.
+:tbd
+
+**Widget-based decomposition**.
+:tbd
+
+### Pattern: Central Aggregating Gateway
+
+:tbd
+
+### Pattern: Backend for Frontend (BFF)
+
+:tbd
+
+### GraphQL
+
+:tbd
+
+### A Hybrid Approach
+
+All the patterns don't need to be one-size-fits-all solutions.
+But **retain cohesion of the underlying capabilities**: don't allow a feature specific logic to get smeared all over
+your system.
+Avoiding the trap of putting too much behaviour into any
+intermediate layer (aggregation gateway) is a tricky balancing act.
+
+
