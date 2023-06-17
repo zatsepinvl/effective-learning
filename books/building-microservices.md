@@ -6,27 +6,16 @@ by Sam Newman
 
 ### Principles of Microservice Deployment
 
-#### Isolated execution
-
-- Microservices don't share computing resources.
-- Microservices can not impact other instances running nearby.
-
-#### Focus on automation
-
-- Automate everything.
-
-#### Infrastructure as Code
-
-- Store infrastructure configuration in source control.
-- Use right tools: Terraform, Pulumi, Puppet, Chef, Ansible.
-
-#### Zero-Downtime Deployment
-
-- Deploy new version of a microservice without any downtime to users or other dependent systems.
-
-#### Desired state management
-
-- Use a platform that maintains your microservices in a defined state (number of instances, allocated resources).
+* **Isolated execution** - microservices don't share computing resources. Microservices can not impact other instances
+  running nearby.
+* **Focus on automation** - automate everything.
+* **Infrastructure as Code** - store infrastructure configuration in source control. Use right tools: Terraform, Pulumi,
+  Puppet, Chef, Ansible.
+* **Zero-Downtime Deployment** - deploy new version of a microservice without any downtime to users or other dependent
+  systems.
+* **Desired state management** - use a platform that maintains your microservices in a defined state (number of
+  instances,
+  allocated resources).
 
 ### Deployment Options
 
@@ -97,14 +86,10 @@ by Sam Newman
 * Separate the concept of deployment from the concept of release.
 * **Deployment** is installing some version of your software into an environment.
 * **Release** is making that version of the software available to users.
-
-#### Feature Flags
-
-#### Canary Releases
-
-#### Parallel Runs
-
-* Run different implementations of the same microservice side by side, send requests to both and then compare the
+* Practice:  **Feature Flags** - enable/disable feature in production using flag boolean variables.
+* Practise: **Canary Releases** - roll-out new functionality for users gradually.
+* Practise: **Parallel Runs** - run different implementations of the same microservice side by side, send requests to
+  both and then compare the
   results.
 
 ## 11. Security
