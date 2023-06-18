@@ -351,22 +351,53 @@ An architectural style where independently deliverable frontend applications are
 Use when want to adopt end-to-end, steam-aligned teams to benefit the most from the microservice architecture.
 
 **Page-based decomposition**.
-:tbd
+
+UI is decomposed into multiple web pages (not SPA). Requires common navigation to help stitch pages together.
+Simplicity of the technical implementation is a real appeal. The user clicks a link, and a new page is requested.
 
 **Widget-based decomposition**.
-:tbd
+
+SPA contains widgets that cna be changed independently. Requires a container application that defines things like the
+navigation.
+
+Be aware of widgets' dependency duplication and version conflicts. Make an effort to reduce the size of the final
+bundle.
+
+This pattern makes it easy for multiple stream-aligned teams to contribute to the same UI.
+Know the constraints: might be hard to apply for mobile app because of device variety and accessibility consistency.
 
 ### Pattern: Central Aggregating Gateway
 
-:tbd
+The way to optimize client-server API communication in case of network issues on mobile devices (latency, network
+contention, lack of stable connection).
+
+Central gateway exposes aggregation and filtering capabilities driven by UI (client) needs.
+
+Fundamentally, due to centralized nature, ends up with all teams making changes into the gateway, thereby leading to
+contention and bottleneck. On the other hand, a single team owning the gateway becomes a bottleneck when it comes to
+delivery.
+
+If you use API Gateway, do not put your domain specific filtering and aggregation logic there.
+
+> When customizing a product build by someone else, you often have to work in THEIR world, not yours. Your toolchain is
+> restricted because you may not be able to use your programming language and your development practises. Configuring
+> that tool in some odd product-specific DSL might be a frustrating experience.
 
 ### Pattern: Backend for Frontend (BFF)
 
-:tbd
+Each "experience" (like web and mobile, or desktop and wearable devices) has its own server exposing client driven
+aggregation and filtering API capabilities.
+
+If BFF is the choice, code duplication is inevitable, but eschew building common library to share some code among
+multiple BFFs as **a
+shared libraries are a prime source of coupling**.
+
+The pattern might also be used for exposing external system driven API (not necessarily user interface)
 
 ### GraphQL
 
-:tbd
+Use to implement aggregation gateway or BFF to be able to change queries without changing the server side (to some
+extent).
 
 ### A Hybrid Approach
 
