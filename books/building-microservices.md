@@ -462,5 +462,11 @@ Atchitecture is a social construct, because it doesn't just depend on the softwa
 
 ### A Principled Approach
 
+* Principles are global rules. Principles frame technical decision making to align it with business strategic goals. 
+* Practises are set of detailed, practical guidlines for performing tasks. Practises underpin principles.
+* Principles and practises change but with different frequency, as the former are more rigid.
+<img width="704" alt="image" src="https://github.com/zatsepinvl/effective-learning/assets/11683340/1eea3213-17e5-487c-b80a-2527c75bc68e">
+
+
 
 
