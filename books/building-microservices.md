@@ -450,9 +450,11 @@ Atchitecture is a social construct, because it doesn't just depend on the softwa
 
 ### A Social Construct
 
-* ❗ Vision is what planned, artchitecture is what happens.
+* 💡 Vision is what planned, artchitecture is what happens.
 * Eventualy architecture is a reflection of the billions upon billions of small and large, intentional and accidential design decisions made along thw way.
 * Successful architecture is a team effort.
+* 💡 Greate software comes from great people. ❗ If you worry only about the technology, you are missing way more than half of the picture.
+* Help people to grow.
 
 ### Habitability
 
@@ -461,6 +463,12 @@ Atchitecture is a social construct, because it doesn't just depend on the softwa
 * Make spending time with the team as a routine activity.
 
 ### A Principled Approach
+
+* Principles are global rules. Principles frame technical decision making to align it with business strategic goals. 
+* Practises are set of detailed, practical guidlines for performing tasks. Practises underpin principles.
+* Principles and practises change but with different frequency, as the former are more rigid.
+<img width="704" alt="image" src="https://github.com/zatsepinvl/effective-learning/assets/11683340/1eea3213-17e5-487c-b80a-2527c75bc68e">
+
 
 
 
