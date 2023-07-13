@@ -407,4 +407,60 @@ your system.
 Avoiding the trap of putting too much behaviour into any
 intermediate layer (aggregation gateway) is a tricky balancing act.
 
+## 16. The Evolutionary Architect
+
+Core responsibilities of the evolutionary architect:
+
+* **Vision** - Ensture there is a clearly communicated technical vision for the system.
+* **Empathy** - Understand the impact of your decision on your customers and colleagues.
+* **Collaboration** - Engage with as many of your peers and colleagues as possbile to help define, refine, and execute the vision.
+* **Adaptability** - Make sure that the technical vision changes as required by your customers or organization.
+* **Atonomy** - Find the right balance between standardizing and enabling autonomy for your teams.
+* **Governance** - Ensure that the system being implemented fits the technical vision, and make sure it is easy for people to do the right thing.
+
+> Rules are for the obedience of fools and the guidance of wise men. - Generally attributed to Douglas Bader.
+
+Governance and The Paved Road techniques:
+
+* **Platform** - The architect ends up being an important stakeholder for the platform team.
+* **Examplars** - Real-world microservice running in your system that get things right.
+* **Tailoed Microservice Template**. Caution: should be provided for each tech stack used across all teams.
+  
+### What Is Software Architecture
+
+❗ Architecture is shared understanding that includes how the system is devided into components and how the components interact through interfaces.
+Atchitecture is a social construct, because it doesn't just depend on the software, but on what part of the software is considered important by group consensus.
+
+❗ As a architect, don't limit the scope of what you care about, because it limits your ability to reason and make changes.
+
+### Makeing Change Possible
+
+📖 [Seagram_Building](https://en.wikipedia.org/wiki/Seagram_Building) was developed using a process in which the design of the building evolved while the construction was carried out. The architects focused on finding a space for core services that would be difficult if not impossbile to change later, but also had to ensure that the building could be used in different ways than originally envisaged.
+
+### An Evolutionary Vision for the Architect
+
+* Focus on building a **framework** where the right system can emerge and continue to grow as we learn more.
+* Be highly specific about implementation detail only in limited cases.
+* Ensure that the system is fit for purpose now but also a **platform** for the future.
+
+### Defining System Boundaries
+
+* Create space for change at large-scope levels.
+* Be worried about what happens between the boxes, and be liberal in what happens inside. Because it must be freedome for teams to lead their technical decisions but guidance between microservices where things can get messy.
+
+### A Social Construct
+
+* ❗ Vision is what planned, artchitecture is what happens.
+* Eventualy architecture is a reflection of the billions upon billions of small and large, intentional and accidential design decisions made along thw way.
+* Successful architecture is a team effort.
+
+### Habitability
+
+* Ensure that the environment you create is nice to work in.
+* Understand the impact of the technical decision on teams and their mental wellbeing.
+* Make spending time with the team as a routine activity.
+
+### A Principled Approach
+
+
 
