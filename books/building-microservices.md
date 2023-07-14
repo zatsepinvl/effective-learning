@@ -469,6 +469,30 @@ Atchitecture is a social construct, because it doesn't just depend on the softwa
 * Principles and practises change but with different frequency, as the former are more rigid.
 <img width="704" alt="image" src="https://github.com/zatsepinvl/effective-learning/assets/11683340/1eea3213-17e5-487c-b80a-2527c75bc68e">
 
+### Guiding Exolutionary Architecture
 
+* Collect real-world data to understand whether or not your architecture is achieving "fitness" against that criteria (apply **fitness function**).
+* Speak with people on the ground.
+
+### Architecture in Stream-Aligned Organization
+
+* Architect can be seen as **enabling responsbilities** leading the architecture team that comprises of tech leads of the teams.
+* When you as an architect disagree with the group (the most challenging situation to face), try to go with the group decision but prevent the team from "steering into a duck pond". If you overrule the team, this can undermine your position and also make the teeam feel that they don't have a say. Knowing when to do this and when not to is tough but sometimes vital.
+* Architect is an important stackholder of the platform and is a member of the platform team.
+
+### The Required Standard
+
+* Define clear attributes that each microservice should have.
+* Cover such aspects as monitoring, interfaces and architectural safety (e.g. stability patterns).
+
+### Technical Debt
+
+* Our technical vision exists for a reason. If we deviate from this reason, it might have a short-term benefit but a long term cost.
+* Technical debt is a **concept** that helps us understand this trade-off.
+
+### Exception Handling
+
+* Track the exceptions to the principles and practises we set. Adapt the rules if many pf them crop up.
+* See microservices as a way of optimizing for autonomy of teams, giving them as much freedom as possible to solve the problem at hand.
 
 
