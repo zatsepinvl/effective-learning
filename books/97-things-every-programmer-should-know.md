@@ -214,7 +214,7 @@
 ### 36. The Guru Myth (Ryan Brush)
 
 1. ❗ When asking others for help privde the full context and don't expect them to be guru and don't expect magic.
-2. 📖 A "guru" is a simply smart person with relentless curiousity and who spent years learning and refining throught process.
+2. 📖 A "guru" is a simply smart person with relentless curiousity and who spent years learning and refining thought process.
 3. 💡 We don't need gurus. We need experts willing to develop other experts in their field. 
 
 ### 38. How to Use a Bug Tracker (Matt Doar)
